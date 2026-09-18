@@ -11,18 +11,21 @@ export function middleware(request: NextRequest) {
   // 2. Daftar Hitam (Blacklist) Robot & Crawler Meta/Google
   // Ini adalah kata kunci yang dipakai oleh robot pemeriksa iklan
   const botKeywords = [
-    'facebookexternalhit', 
-    'Facebot', 
-    'MetaURI', 
-    'WhatsApp',
-    'Googlebot', 
-    'Bingbot',
-    'Slurp', 
-    'DuckDuckBot',
-    'bot', 
-    'crawler', 
-    'spider'
-  ];
+  'facebookexternalhit', 
+  'Facebot', 
+  'MetaURI', 
+  'WhatsApp',
+  'Googlebot', 
+  'Bingbot',
+  'Slurp', 
+  'DuckDuckBot',
+  'TikTokBot',
+  'Bytespider',
+  'ByteLocaleMachine',
+  'bot', 
+  'crawler', 
+  'spider'
+];
 
   // Cek apakah User-Agent pengunjung mengandung kata kunci bot di atas
   const isBot = botKeywords.some(bot => 
