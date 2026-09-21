@@ -13,24 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 // ==========================================
-// BAGIAN METADATA (TAMENG SEO FACEBOOK)
+// BAGIAN METADATA (TAMENG GATEWAY 18+)
 // ==========================================
 export const metadata: Metadata = {
-  title: "Blog Review Sepatu Futsal", 
-  description: "Membahas tuntas sepatu futsal lokal terbaik untuk lapangan sintetis.",
+  title: "Access Verification", 
+  description: "Please verify your age to continue to the content.",
   openGraph: {
-    title: "Blog Review Sepatu Futsal",
-    description: "Membahas tuntas sepatu futsal lokal terbaik untuk lapangan sintetis.",
-    
-    url: "https://safe-page.vercel.app", 
-    
-    siteName: "Review Futsal",
+    title: "Access Verification",
+    description: "Please verify your age to continue to the content.",
+    url: "https://safe-page.vercel.app", // Opsional: Ganti dengan URL asli Vercel lu
+    siteName: "Content Gateway",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1511886929837-354d827aae26", 
+        url: "https://images.unsplash.com/photo-1614064641913-6b7140414c71?w=800", // Gambar ilustrasi gembok/keamanan general
         width: 1200,
         height: 630,
-        alt: "Sepatu Futsal Keren",
+        alt: "Security Verification",
       },
     ],
     locale: "id_ID",
@@ -38,8 +36,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Catatan: Gua ubah LayoutProps<"/"> jadi React.ReactNode standar 
-// supaya nggak error waktu di-deploy ke Vercel (karena tipe datanya nggak di-import).
 export default function RootLayout({
   children,
 }: Readonly<{

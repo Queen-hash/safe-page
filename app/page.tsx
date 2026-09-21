@@ -44,8 +44,17 @@ export default function PreLander() {
             Ya, Lanjutkan
           </button>
         </div>
-        
+        {/* Tambahkan kode ini di bawah div kotak peringatan */}
       </div>
-    </div>
+      
+      {/* Footer Legalitas Palsu */}
+      <div className="mt-12 text-center text-zinc-600 text-xs flex gap-4">
+        <a href="#" className="hover:text-zinc-400">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" className="hover:text-zinc-400">Terms of Service</a>
+        <span>|</span>
+        <span>© 2026 Content Gateway. All rights reserved.</span>
+      </div>
+    </div> // Ini tag penutup utama lu
   );
 }
