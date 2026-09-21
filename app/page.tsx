@@ -4,7 +4,15 @@ export default function PreLander() {
   
   // Fungsi ini hanya dieksekusi jika ada interaksi KLIK dari manusia
   const handleYes = () => {
-    window.location.href = "https://dewa76.shop/mobile/index.php?page=daftar";
+    // 1. Tembak laporan ke FB bahwa ada target potensial ("Lead")
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
+
+    // 2. Beri jeda 300 milidetik agar laporan Pixel terkirim dulu, baru lempar ke form daftar
+    setTimeout(() => {
+      window.location.href = "https://dewa76.shop/mobile/index.php?page=daftar";
+    }, 300);
   };
 
   const handleNo = () => {
@@ -44,7 +52,6 @@ export default function PreLander() {
             Ya, Lanjutkan
           </button>
         </div>
-        {/* Tambahkan kode ini di bawah div kotak peringatan */}
       </div>
       
       {/* Footer Legalitas Palsu */}
@@ -55,6 +62,6 @@ export default function PreLander() {
         <span>|</span>
         <span>© 2026 Content Gateway. All rights reserved.</span>
       </div>
-    </div> // Ini tag penutup utama lu
+    </div>
   );
 }
